@@ -6,6 +6,13 @@ export default function Home() {
   const [animalInput, setAnimalInput] = useState("");
   const [result, setResult] = useState();
 
+
+  function sendAnswer (event){
+    setTimeout(() => {
+      onSubmit(event)
+    }, 1000);
+  }
+
   async function onSubmit(event) {
     event.preventDefault();
     try {
@@ -47,7 +54,7 @@ export default function Home() {
             value={animalInput}
             onChange={(e) => setAnimalInput(e.target.value)}
           />
-          <input type="submit" value="Gerar Resposta" />
+          <div onClick={sendAnswer} className={styles.buttonSend}> Gerar Resposta</div>
         </form>
         <div className={styles.result}>{result}</div>
       </main>

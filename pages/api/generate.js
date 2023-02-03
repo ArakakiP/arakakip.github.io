@@ -22,7 +22,7 @@ export default async function (req, res) {
       model: "text-davinci-003",
       prompt: animal,
       temperature: 1,
-      max_tokens: 200,
+      max_tokens: 1000,
     });
     res.status(200).json({ result: completion.data.choices[0].text });
   } catch(error) {

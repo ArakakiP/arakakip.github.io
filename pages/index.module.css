@@ -63,6 +63,8 @@
   margin-top: 10px;
 }
 .main .result {
+  max-width: 50%;
+  word-break: break-word;
   font-weight: bold;
   margin-top: 40px;
 }

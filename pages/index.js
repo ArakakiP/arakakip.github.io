@@ -53,6 +53,7 @@ export default function Home() {
           <textarea
             type="text"
             name="animal"
+            className={styles.textArea}
             placeholder="Pergunta"
             value={animalInput}
             onChange={(e) => setAnimalInput(e.target.value)}

@@ -72,6 +72,10 @@
   text-align: center;
   word-break: break-word;
 }
+
+.textArea{
+  height: 100px;
+}
 .main .result {
   width: 50%;
   word-break: break-word;

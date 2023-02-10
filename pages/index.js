@@ -15,6 +15,7 @@ export default function Home() {
   }
 
   async function onSubmit(event) {
+    console.log(animalInput)
     setSelecionadoPergunta(true);
     setResult("");
     event.preventDefault();
@@ -24,7 +25,7 @@ export default function Home() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(animalInput ),
+        body: JSON.stringify(animalInput),
       });
 
       const data = await response.json();

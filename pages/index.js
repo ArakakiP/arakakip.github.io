@@ -4,6 +4,7 @@ import styles from "./index.module.css";
 
 export default function Home() {
   const [animalInput, setAnimalInput] = useState("");
+  const [selecionadoPergunta, setSelecionadoPergunta] = useState(false);
   const [result, setResult] = useState();
 
 
@@ -14,6 +15,8 @@ export default function Home() {
   }
 
   async function onSubmit(event) {
+    setSelecionadoPergunta(true);
+    setResult("");
     event.preventDefault();
     try {
       const response = await fetch("/api/generate", {
@@ -28,7 +31,7 @@ export default function Home() {
       if (response.status !== 200) {
         throw data.error || new Error(`Request failed with status ${response.status}`);
       }
-      console.log(data)
+      setSelecionadoPergunta(false);
       setResult(data.result);
       setAnimalInput("");
     } catch(error) {
@@ -56,7 +59,13 @@ export default function Home() {
           />
           <div onClick={sendAnswer} className={styles.buttonSend}> Gerar Resposta</div>
         </form>
-        <div className={styles.result}>{result}</div>
+        <div className={styles.divResult}>
+        {result=="" && selecionadoPergunta && <div  className={styles.result}>Carregando...</div>}
+        {result!="" && !selecionadoPergunta &&
+           <div className={styles.result}>{result}</div>
+        }
+        </div>
+
       </main>
     </div>
   );

@@ -62,8 +62,18 @@
   cursor: pointer;
   margin-top: 10px;
 }
+.divResult{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  word-break: break-word;
+}
 .main .result {
-  max-width: 50%;
+  width: 50%;
   word-break: break-word;
   font-weight: bold;
   margin-top: 40px;

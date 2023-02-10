@@ -20,7 +20,7 @@ export default async function (req, res) {
   try {
     const completion = await openai.createCompletion({
       model: "text-davinci-003",
-      prompt: animal,
+      prompt: 'Sou um robô altamente inteligênte para responder perguntas. Se você me fizer uma pergunta que esteja fundada na verdade, eu lhe darei a resposta. '+animal,
       temperature: 1,
       max_tokens: 1000,
     });

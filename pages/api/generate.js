@@ -3,10 +3,6 @@ import { Configuration, OpenAIApi } from "openai";
 const configuration = new Configuration({
   apiKey: process.env.OPENAI_API_KEY,
 });
-
-export const config = {
-  runtime: "edge",
-};
 const openai = new OpenAIApi(configuration);
 
 export default async function (req, res) {
@@ -24,7 +20,7 @@ export default async function (req, res) {
   try {
     const completion = await openai.createCompletion({
       model: "text-davinci-003",
-      prompt: animal,
+      prompt: 'Sou um robô altamente inteligênte para responder perguntas. Se você me fizer uma pergunta que esteja fundada na verdade, eu lhe darei a resposta. '+animal,
       temperature: 1,
       max_tokens: 1000,
       top_p: 1,

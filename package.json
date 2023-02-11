@@ -15,5 +15,10 @@
   },
   "engines": {
     "node": ">=14.6.0"
+  },
+  "functions": {
+    "pages/api/**/*.ts": {
+      "maxDuration": 60
+    }
   }
 }

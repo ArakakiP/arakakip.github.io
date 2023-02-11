@@ -17,7 +17,7 @@
     "node": ">=14.6.0"
   },
   "functions": {
-    "pages/api/**/*.ts": {
+    "pages/api/**/*.js": {
       "maxDuration": 60
     }
   }

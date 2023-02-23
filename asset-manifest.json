@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.07dfc9e1.css",
+    "main.js": "/static/js/main.9fd644fd.js",
+    "static/js/787.3eb71ef1.chunk.js": "/static/js/787.3eb71ef1.chunk.js",
+    "static/media/logo-pax-nippon.png": "/static/media/logo-pax-nippon.85dba69a85e35d55f528.png",
+    "index.html": "/index.html",
+    "main.07dfc9e1.css.map": "/static/css/main.07dfc9e1.css.map",
+    "main.9fd644fd.js.map": "/static/js/main.9fd644fd.js.map",
+    "787.3eb71ef1.chunk.js.map": "/static/js/787.3eb71ef1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.07dfc9e1.css",
+    "static/js/main.9fd644fd.js"
+  ]
+}
